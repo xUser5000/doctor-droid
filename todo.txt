@@ -1,0 +1,10 @@
+-- Authentication UI
+-- Firebase init
+-- Authentication data
+
+-- Design Home UI
+-- logout
+-- add new chat
+-- get all chats
+chat implementation
+about

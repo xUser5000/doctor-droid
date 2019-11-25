@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_message_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/view_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_message_blue"
+        android:padding="15dp"
+        android:text="Hello, dude"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
