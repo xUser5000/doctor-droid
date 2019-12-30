@@ -18,8 +18,6 @@ import io.reactivex.schedulers.Schedulers;
 import io.realm.Realm;
 import retrofit2.Response;
 
-import static com.doctordroid.presentation.auth.login.LoginButton.TAG;
-
 public class MessageRepository {
 
     private static final MessageRepository ourInstance = new MessageRepository();
@@ -48,7 +46,6 @@ public class MessageRepository {
     public void addQuestion (String chatId, LocalQuestion localQuestion) {
         Chat chat = findChatById(chatId);
         realm.executeTransaction(realm -> chat.getLocalQuestions().add(localQuestion));
-        Log.i(TAG, "addQuestion: Here !");
     }
 
     public Single<Response<ParseResponse>> parse (ParseRequest request) {

@@ -1,23 +1,25 @@
 package com.doctordroid.presentation.home;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.ViewModelProviders;
+
 import com.doctordroid.R;
-import com.doctordroid.presentation.auth.AuthActivity;
 import com.doctordroid.presentation.home.About.AboutFragment;
 import com.doctordroid.presentation.home.Chats.ChatsFragment;
+import com.doctordroid.presentation.login.LoginActivity;
+import com.google.android.material.navigation.NavigationView;
+
+import javax.annotation.Nonnull;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -65,7 +67,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+    public boolean onNavigationItemSelected(@Nonnull MenuItem menuItem) {
 
         switch (menuItem.getItemId()) {
 
@@ -91,7 +93,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private void logout () {
         viewModel.logout();
         Toast.makeText(this, "Good Bye :)", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, AuthActivity.class));
+        startActivity(new Intent(this, LoginActivity.class));
         finish();
     }
 }

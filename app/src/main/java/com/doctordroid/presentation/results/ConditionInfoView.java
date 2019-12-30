@@ -1,7 +1,6 @@
 package com.doctordroid.presentation.results;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
@@ -10,6 +9,8 @@ import android.widget.TextView;
 import com.doctordroid.R;
 import com.doctordroid.common.util.ChatUtil;
 import com.doctordroid.entity.local.LocalConditionInfo;
+
+import javax.annotation.Nullable;
 
 public class ConditionInfoView extends LinearLayout {
 

@@ -1,6 +1,6 @@
 package com.doctordroid.presentation.home.Chats;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.doctordroid.data.repository.ChatRepository;
 import com.doctordroid.entity.local.Chat;

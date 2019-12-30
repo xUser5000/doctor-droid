@@ -1,7 +1,6 @@
 package com.doctordroid.presentation.chat;
 
-import android.arch.lifecycle.ViewModel;
-import android.util.Log;
+import androidx.lifecycle.ViewModel;
 
 import com.doctordroid.common.util.ChatUtil;
 import com.doctordroid.data.remote.ApiError;
@@ -31,8 +30,6 @@ import io.realm.rx.ObjectChange;
 import lombok.Getter;
 import lombok.Setter;
 import retrofit2.Response;
-
-import static com.doctordroid.presentation.auth.login.LoginButton.TAG;
 
 @Getter
 @Setter
@@ -77,7 +74,6 @@ public class ChatViewModel extends ViewModel {
                 if (!response.isSuccessful() || response.body() == null) {
                     ApiError error = RemoteDataSource.parseError(response);
                     emitter.onError(new Throwable("Something went wrong on the server: " + response.code()));
-                    Log.e(TAG, "onSuccess: ", new Throwable(error.getMessage()));
                     return;
                 }
 
@@ -129,7 +125,6 @@ public class ChatViewModel extends ViewModel {
             public void onSuccess(Response<DiagnosisResponse> response) {
                 if (!response.isSuccessful() || response.body() == null) {
                     ApiError error = RemoteDataSource.parseError(response);
-                    Log.e(TAG, "onSuccess: ", new Throwable(error.getMessage()));
                     return;
                 }
 
@@ -147,7 +142,6 @@ public class ChatViewModel extends ViewModel {
 
             @Override
             public void onError(Throwable e) {
-                Log.e(TAG, "onError: ", e);
                 chatInterface.showToast("You are offline");
             }
         });

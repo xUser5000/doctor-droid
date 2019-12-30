@@ -1,13 +1,7 @@
 package com.doctordroid.presentation.chat;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -18,12 +12,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.doctordroid.R;
 import com.doctordroid.common.util.ChatUtil;
 import com.doctordroid.entity.local.Chat;
 import com.doctordroid.entity.local.LocalQuestion;
 import com.doctordroid.entity.remote.response.ParseResponse;
 import com.doctordroid.presentation.results.ResultsActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;

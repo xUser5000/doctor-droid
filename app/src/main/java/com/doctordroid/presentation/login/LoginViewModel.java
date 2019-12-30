@@ -1,6 +1,6 @@
-package com.doctordroid.presentation.auth.login;
+package com.doctordroid.presentation.login;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.doctordroid.data.repository.AuthRepository;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,6 +23,10 @@ public class LoginViewModel extends ViewModel {
                 emitter.onComplete();
             });
         }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+    }
+
+    public boolean isAuthenticated () {
+        return authRepository.isAuthenticated();
     }
 
 }

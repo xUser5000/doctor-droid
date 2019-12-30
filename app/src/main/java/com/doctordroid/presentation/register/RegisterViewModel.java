@@ -1,6 +1,6 @@
-package com.doctordroid.presentation.auth.register;
+package com.doctordroid.presentation.register;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.doctordroid.data.repository.AuthRepository;
 import com.google.firebase.auth.FirebaseUser;

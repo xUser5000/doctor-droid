@@ -1,6 +1,6 @@
 package com.doctordroid.presentation.home;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.doctordroid.data.repository.AuthRepository;
 

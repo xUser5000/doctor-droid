@@ -1,6 +1,6 @@
 package com.doctordroid.presentation.results;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.doctordroid.common.util.ChatUtil;
 import com.doctordroid.data.remote.ApiError;

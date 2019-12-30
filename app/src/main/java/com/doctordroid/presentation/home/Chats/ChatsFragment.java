@@ -1,23 +1,25 @@
 package com.doctordroid.presentation.home.Chats;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.doctordroid.R;
 import com.doctordroid.entity.local.Chat;
 import com.doctordroid.presentation.chat.ChatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 import io.reactivex.disposables.Disposable;
 import io.realm.RealmResults;
@@ -47,7 +49,7 @@ public class ChatsFragment extends Fragment implements AddChatDialog.OnAddChatDi
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@Nonnull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         recyclerView = parent.findViewById(R.id.chats_recycler_view);
@@ -78,12 +80,12 @@ public class ChatsFragment extends Fragment implements AddChatDialog.OnAddChatDi
         // Swipe-to-delete functionality
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder viewHolder1) {
+            public boolean onMove(@Nonnull RecyclerView recyclerView, @Nonnull RecyclerView.ViewHolder viewHolder, @Nonnull RecyclerView.ViewHolder viewHolder1) {
                 return false;
             }
 
             @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+            public void onSwiped(@Nonnull RecyclerView.ViewHolder viewHolder, int i) {
                 Chat chat = adapter.getChatAt(viewHolder.getAdapterPosition());
                 viewModel.deleteChat(chat);
             }

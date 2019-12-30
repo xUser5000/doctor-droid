@@ -1,15 +1,17 @@
 package com.doctordroid.presentation.chat;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.doctordroid.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.reactivex.annotations.NonNull;
 
 public class ChatMessagesAdapter extends RecyclerView.Adapter<ChatMessagesAdapter.MessageHolder> {
 

@@ -2,10 +2,6 @@ package com.doctordroid.presentation.home.Chats;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +9,15 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+
 import com.doctordroid.R;
 import com.doctordroid.common.util.IdGenerator;
 import com.doctordroid.entity.local.Chat;
 import com.doctordroid.entity.local.Gender;
+
+import javax.annotation.Nonnull;
 
 public class AddChatDialog extends DialogFragment {
 
@@ -26,9 +27,9 @@ public class AddChatDialog extends DialogFragment {
         this.listener = listener;
     }
 
-    @NonNull
+    @Nonnull
     @Override
-    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
         LayoutInflater inflater = LayoutInflater.from(getContext());

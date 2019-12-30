@@ -1,11 +1,11 @@
 package com.doctordroid.presentation.home.Chats;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.doctordroid.R;
 import com.doctordroid.common.util.ChatUtil;
@@ -14,6 +14,8 @@ import com.doctordroid.presentation.chat.Message;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Nonnull;
 
 public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatHolder> {
 
@@ -31,9 +33,9 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatHolder> 
         }
     }
 
-    @NonNull
+    @Nonnull
     @Override
-    public ChatHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+    public ChatHolder onCreateViewHolder(ViewGroup parent, int i) {
         View itemView = LayoutInflater
                 .from(parent.getContext())
                 .inflate(R.layout.item_chats_recycler_view, parent, false);
@@ -41,7 +43,7 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChatHolder holder, int position) {
+    public void onBindViewHolder(ChatHolder holder, int position) {
         Chat chat = chats.get(position);
         holder.titleText.setText(chat.getName());
 
