@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.doctordroid.R;
 import com.doctordroid.presentation.home.HomeActivity;
 import com.doctordroid.presentation.register.RegisterActivity;
+import com.doctordroid.presentation.resetPassword.ResetPasswordActivity;
 import com.google.firebase.auth.FirebaseUser;
 
 import io.reactivex.Observer;
@@ -25,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "Login";
     private EditText emailText, passwordText;
     private AppCompatButton loginButton;
-    private AppCompatTextView goRegisterButton;
+    private AppCompatTextView goRegisterButton, resetPassword;
 
     // data
     private LoginViewModel viewModel;
@@ -40,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
 
         loginButton = findViewById(R.id.login_button);
         goRegisterButton = findViewById(R.id.login_go_to_register_button);
+        resetPassword = findViewById(R.id.login_reset_password);
 
         viewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
 
@@ -47,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
 
         loginButton.setOnClickListener(this::login);
         goRegisterButton.setOnClickListener(this::goRegister);
+        resetPassword.setOnClickListener(this::goResetPassword);
     }
 
     public void login (View view) {
@@ -82,6 +85,10 @@ public class LoginActivity extends AppCompatActivity {
 
     public void goRegister (View view) {
         startActivity(new Intent(this, RegisterActivity.class));
+    }
+
+    public void goResetPassword (View view) {
+        startActivity(new Intent(this, ResetPasswordActivity.class));
     }
 
     // redirect to the home screen

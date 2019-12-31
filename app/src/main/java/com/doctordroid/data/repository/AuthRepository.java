@@ -40,6 +40,10 @@ public class AuthRepository {
         return auth.getCurrentUser();
     }
 
+    public Task<Void> sendResetPasswordEmail (String email) {
+        return auth.sendPasswordResetEmail(email);
+    }
+
     public void logout () {
         auth.signOut();
         realm.executeTransaction(realm -> realm.deleteAll());

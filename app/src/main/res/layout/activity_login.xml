@@ -104,6 +104,7 @@
         android:textSize="12sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/login_reset_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
