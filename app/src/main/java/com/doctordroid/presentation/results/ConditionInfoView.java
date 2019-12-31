@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 public class ConditionInfoView extends LinearLayout {
 
-    private TextView genderText, categoriesText, prevalenceText, acutenessText, severityText, hintsText;
+    private TextView percentageText, genderText, categoriesText, prevalenceText, acutenessText, severityText, hintsText;
     private LinearLayout prevalenceContainer, acutenessContainer, severityContainer, hintsContainer;
 
     public ConditionInfoView(Context context) {
@@ -51,6 +51,7 @@ public class ConditionInfoView extends LinearLayout {
         severityContainer = findViewById(R.id.info_severity_container);
         hintsContainer = findViewById(R.id.info_hints_container);
 
+        percentageText = findViewById(R.id.info_percentage);
         genderText = findViewById(R.id.info_gender);
         categoriesText = findViewById(R.id.info_categories);
         prevalenceText = findViewById(R.id.info_prevalence);
@@ -59,7 +60,8 @@ public class ConditionInfoView extends LinearLayout {
         hintsText = findViewById(R.id.info_hints);
     }
 
-    public void setConditionInfo (LocalConditionInfo conditionInfo) {
+    public void setConditionInfo (float percentage, LocalConditionInfo conditionInfo) {
+        percentageText.setText(String.format("%s%%", String.valueOf(percentage * 100)));
         genderText.setText(conditionInfo.getGenderFilter());
         categoriesText.setText(ChatUtil.fromStringListToString(conditionInfo.getCategories()));
 

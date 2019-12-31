@@ -92,19 +92,6 @@ public final class ChatUtil {
         return conditionsList;
     }
 
-    public static List<RemoteCondition> toRemoteConditionsList (RealmList<LocalCondition> localConditions) {
-        List<RemoteCondition> remoteConditions = new ArrayList<>();
-        for (LocalCondition localCondition: localConditions) {
-            RemoteCondition remoteCondition = new RemoteCondition(
-                    localCondition.getId(),
-                    localCondition.getName(),
-                    localCondition.getProbability()
-            );
-            remoteConditions.add(remoteCondition);
-        }
-        return remoteConditions;
-    }
-
     public static String fromStringListToString (List<String> stringList) {
         StringBuilder builder = new StringBuilder();
         for (String str: stringList) builder.append(str).append(" ");

@@ -29,13 +29,13 @@
     <string name="please_sign_in">Sign in to continue</string>
     <string name="Password">Password</string>
     <string name="Email"><font size="15">Email</font></string>
-    <string name="login_with">Login with</string>
+    <string name="remember_me">Remember me</string>
     <string name="please_sign_up">Sign up to continue</string>
     <string name="discover">“Discover your diseases easily”</string>
     <string name="sign_up_with">Sign up with</string>
     <string name="title_activity_maps">Map</string>
 
-    <string name="facebook_app_id">572007469920015</string>
-    <string name="fb_login_protocol_scheme">fb572007469920015</string>
+    <string name="facebook_app_id">1011680025885335</string>
+    <string name="fb_login_protocol_scheme">fb1011680025885335</string>
 
 </resources>

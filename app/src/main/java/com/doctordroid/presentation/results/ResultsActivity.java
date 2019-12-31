@@ -30,6 +30,7 @@ public class ResultsActivity extends AppCompatActivity {
 
     // data
     private ResultsViewModel viewModel;
+    private LocalCondition condition;
 
     private String conditionId;
 
@@ -47,7 +48,7 @@ public class ResultsActivity extends AppCompatActivity {
         viewModel = ViewModelProviders.of(this).get(ResultsViewModel.class);
 
         Chat chat = viewModel.getChat(getIntent().getStringExtra("chatId"));
-        LocalCondition condition = chat.getLocalConditions().last();
+        condition = chat.getLocalConditions().last();
 
         conditionId = condition.getId();
         conditionNameText.setText(condition.getName());
@@ -71,7 +72,7 @@ public class ResultsActivity extends AppCompatActivity {
             public void onSuccess(LocalConditionInfo conditionInfo) {
                 refreshLayout.setRefreshing(false);
                 mainContainer.setVisibility(View.VISIBLE);
-                conditionInfoView.setConditionInfo(conditionInfo);
+                conditionInfoView.setConditionInfo(condition.getProbability(), conditionInfo);
             }
 
             @Override

@@ -23,7 +23,7 @@ public class AddChatDialog extends DialogFragment {
 
     private OnAddChatDialogListener listener;
 
-    public void setListener (OnAddChatDialogListener listener) {
+    public void setListener(OnAddChatDialogListener listener) {
         this.listener = listener;
     }
 
@@ -47,13 +47,18 @@ public class AddChatDialog extends DialogFragment {
                     String name = nameText.getText().toString().trim();
                     String ageT = ageText.getText().toString().trim();
 
+                    int age = Byte.parseByte(ageT);
+                    String gender = (maleRadio.isChecked()) ? (Gender.MALE) : (Gender.FEMALE);
+
                     if (TextUtils.isEmpty(name) || TextUtils.isEmpty(ageT)) {
                         Toast.makeText(getContext(), "You must fill out all the fields", Toast.LENGTH_SHORT).show();
                         return;
                     }
 
-                    int age = Byte.parseByte(ageT);
-                    String gender = (maleRadio.isChecked()) ? (Gender.MALE) : (Gender.FEMALE);
+                    if (age > 80 || age < 5) {
+                        Toast.makeText(getContext(), "Your age must be between 5 and 80 to use this feature", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
                     Chat chat = new Chat();
                     chat.setId(IdGenerator.randomIdentifier());
@@ -72,6 +77,6 @@ public class AddChatDialog extends DialogFragment {
     }
 
     public interface OnAddChatDialogListener {
-        void onPositiveClick (Chat chat);
+        void onPositiveClick(Chat chat);
     }
 }

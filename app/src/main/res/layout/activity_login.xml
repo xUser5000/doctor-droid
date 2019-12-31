@@ -25,7 +25,8 @@
             android:paddingStart="18dp"
             android:paddingEnd="16dp"
             android:textColor="#fff"
-            android:textColorHint="#fff">
+            android:textColorHint="#fff"
+            android:theme="@style/auto_fill">
 
         </androidx.appcompat.widget.AppCompatEditText>
 
@@ -102,14 +103,13 @@
         android:textColor="#fff"
         android:textSize="12sp" />
 
-
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="141dp"
         android:text="@string/forget"
         android:textColor="#ee3a68" />
 
@@ -154,40 +154,31 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="32dp"
-        android:layout_marginBottom="124dp">
+        android:layout_marginBottom="133dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/login_with_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/login_with"
-            android:textColor="#fff" />
+            android:id="@+id/remember_me"
+            android:text="@string/remember_me"
+            android:textColor="#fff"
+            android:layout_marginTop="12dp">
+        </androidx.appcompat.widget.AppCompatTextView>
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/login_with_facebook_button"
+        <androidx.appcompat.widget.AppCompatCheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            android:layout_toEndOf="@id/remember_me"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
-            android:layout_toEndOf="@id/login_with_label"
             android:background="#111111"
-            android:src="@drawable/ic_facebook_logo" />
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/login_with_google_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
-            android:layout_toEndOf="@id/login_with_facebook_button"
-            android:background="#111111"
-            android:src="@drawable/ic_google">
+            android:buttonTint="#ee3a68"
+            android:checked="true">
+        </androidx.appcompat.widget.AppCompatCheckBox>
 
-        </androidx.appcompat.widget.AppCompatImageButton>
 
     </RelativeLayout>
-
 </RelativeLayout>
 
 

@@ -53,12 +53,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.google.firebase:firebase-firestore:21.3.1'
 
-    // google sign in
-    implementation 'com.google.android.gms:play-services-auth:17.0.0'
-
-    // facebook sign in
-    implementation 'com.facebook.android:facebook-login:[5,6)'
-
     // HTTP Client (Retrofit)
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'

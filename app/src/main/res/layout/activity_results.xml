@@ -33,7 +33,7 @@
 
     </com.github.florent37.shapeofview.shapes.ArcView>
 
-    <androidx.core.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/results_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -91,6 +91,6 @@
 
         </ScrollView>
 
-    </androidx.core.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>
