@@ -39,5 +39,10 @@
     <string name="fb_login_protocol_scheme">fb1011680025885335</string>
 
     <string name="reset_password_description">* We will send you a link through email to reset your password</string>
-
+    <string name="About_us">About us</string>
+    <string name="first_paragraph_about_us">DoctorDroid is an android application intended to solve the problem of public health in the Egyptian society. Using an interview-like interface, the user starts by describing the symptoms he suffers from. Then, the application asks some questions based on the initial description of the symptoms.After that, the application sends to the user the best probability of gis disease and a percentage of this disease</string>
+    <string name="Contributors">Contributors</string>
+    <string name="Abdallah">Abdallah Ahmed: Android Developer</string>
+    <string name="Mohamed">Mohamed Atef and Ahmed Mustafa: UI/UX Designers</string>
 </resources>
+
