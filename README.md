@@ -1,10 +1,10 @@
-#Description
+# Description
 Doctor-droid is an android application intended to help people diagnose their health conditions.
 
-#Technology
+# Technology
 Java + The native Android framework
 
-#Libraries
+# Libraries
 - Google material design
 - Animated Recycler view
 - Shape of view
@@ -14,6 +14,6 @@ Java + The native Android framework
 - Lombok
 - JUnit (Testing)
 
-#Third-party services
+# Third-party services
 - Google Play services
 - Firebase
